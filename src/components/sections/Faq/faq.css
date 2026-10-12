@@ -1,0 +1,10 @@
+.faq{max-width:760px;margin:0 auto}
+details{border:1.5px solid #f1dbe3;border-radius:14px;padding:16px 22px;margin-bottom:12px;background:#fff}
+summary{cursor:pointer;font-weight:500;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::after{content:"+";color:var(--pink);font-size:1.4rem;line-height:1}
+details[open] summary::after{content:"–"}
+details p{margin:12px 0 0;color:var(--mute);font-size:.9rem}
+details{transition:border-color .2s,box-shadow .2s}
+details:hover{border-color:#f4a9c3;box-shadow:0 6px 16px rgba(244,36,111,.07)}
+details[open]{border-color:#f4a9c3;box-shadow:0 6px 16px rgba(244,36,111,.07)}
+details[open] p{animation:fade .35s ease}

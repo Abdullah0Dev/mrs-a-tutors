@@ -1,0 +1,23 @@
+.about{padding:40px 0 80px}
+.about .wrap{display:grid;grid-template-columns:1fr;gap:26px;align-items:center;max-width:1280px}
+.photo{position:relative;background:linear-gradient(160deg,#fbe8d4,#f3d5bf);border-radius:30px 60px 30px 60px;aspect-ratio:1.1;overflow:hidden;box-shadow:0 20px 40px rgba(180,100,80,.15);width:100%;max-width:560px;margin:0 auto}
+.photo svg{width:100%;height:100%}
+.note{position:absolute;background:#fb9cc0;color:#7a1038;font-family:var(--font-hand),cursive;font-size:1.35rem;line-height:1.1;padding:16px 18px;text-align:center;transform:rotate(-8deg);left:12px;bottom:22px;box-shadow:0 6px 14px rgba(0,0,0,.12);border-radius:3px}
+.about h2{font-size:clamp(2rem,4vw,2.5rem);font-weight:700;margin-bottom:16px}
+.about p{color:var(--mute);font-size:.95rem;max-width:540px;margin:0}
+.quote{position:relative;margin:0 auto;max-width:330px;text-align:center;font-family:var(--font-hand),cursive;font-size:2.1rem;line-height:1.15;color:#2a2a33;transform:rotate(-5deg);padding:6px 10px}
+.quote svg{display:block;width:34px;height:34px;margin:8px auto 0;stroke:var(--pink);fill:none;stroke-width:2.4;transform:rotate(12deg)}
+.quote::before{content:"";position:absolute;left:-6px;top:-4px;width:26px;height:26px;background:linear-gradient(#f6b800,#f6b800) 50% 0/3px 12px no-repeat,linear-gradient(#f6b800,#f6b800) 0 50%/12px 3px no-repeat;opacity:.9}
+.feats{display:flex;gap:26px;flex-wrap:wrap;margin:0 0 26px}
+.feats div{display:flex;align-items:center;gap:10px;font-size:.8rem;font-weight:500;line-height:1.3}
+.feats svg{width:34px;height:34px;stroke:var(--pink);fill:none;stroke-width:1.8;flex:none}
+@media(min-width:1100px){
+.about .wrap{grid-template-columns:360px 1fr 230px;grid-template-areas:"photo head quote" "photo feat quote";column-gap:44px;row-gap:0}
+.photo{grid-area:photo;margin:0;max-width:none}
+.ahead{grid-area:head;align-self:end;padding-bottom:22px}
+.afeat{grid-area:feat;align-self:start}
+.quote{grid-area:quote;align-self:center;font-size:2.2rem}
+}
+.note{transition:transform .3s}
+.photo:hover .note{transform:rotate(-4deg) scale(1.03)}
+.quote svg{animation:beat 2.6s ease-in-out infinite}

@@ -1,0 +1,23 @@
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);padding-top:env(safe-area-inset-top,0px)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+.logo{display:flex;align-items:center;gap:8px;font-family:var(--font-hand),cursive;font-size:1.5rem;font-weight:700;line-height:1}
+.logo svg{width:116px;height:68px;display:block;overflow:visible}
+.logo img{height:68px;width:auto;display:block}
+nav ul{display:flex;gap:30px;list-style:none;margin:0;padding:0;font-size:.85rem}
+nav a{padding:6px 0;border-bottom:2px solid transparent}
+nav a:hover{color:var(--pink);border-color:var(--pink)}
+nav a.on{color:var(--pink);border-color:var(--pink)}
+.burger{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer;padding:10px}
+.burger span{display:block;height:2.5px;background:var(--ink);margin:6px 0;border-radius:2px;transition:.2s}
+@media(max-width:860px){
+.burger{display:block}
+nav{position:absolute;left:0;right:0;top:100%;background:#fff;border-top:1px solid #f1e6ea;box-shadow:0 12px 20px rgba(0,0,0,.08);display:none}
+nav.open{display:block}
+nav ul{flex-direction:column;gap:0;padding:8px 24px 18px}
+nav li a{display:block;padding:12px 0;border:0}
+.nav>.btn{display:none}
+}
+header{transition:box-shadow .3s}
+header.scrolled{box-shadow:0 6px 22px rgba(60,20,40,.08)}
+nav a{transition:color .2s,border-color .2s}
+nav.open{animation:fade .25s ease}
