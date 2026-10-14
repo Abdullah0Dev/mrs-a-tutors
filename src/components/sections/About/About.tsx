@@ -1,7 +1,7 @@
+import Image from 'next/image';
 import { Fragment } from 'react';
 import Icon, { type IconName } from '@/components/ui/Icon';
 import { reveal } from '@/lib/reveal';
-import AboutPhoto from './AboutPhoto';
 import './about.css';
 import { MoveRight } from '@/constants/svgs';
 
@@ -16,7 +16,13 @@ export default function About() {
     <section className="about" id="about">
       <div className="wrap">
         <div className="photo" {...reveal(0)}>
-          <AboutPhoto />
+          <Image
+            src="/images/hero-img.jpeg"
+            alt="A child placing foam number cards 1, 2 and 3 during a hands-on tuition session"
+            fill
+            sizes="(min-width: 1100px) 360px, (min-width: 560px) 560px, 100vw"
+            className="object-cover object-[50%_45%]"
+          />
           <div className="note">Same<br />Children<br />Same<br />Potential<br />Different<br />Paths ♡</div>
         </div>
 
