@@ -33,7 +33,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="copy">
-          <span>© {new Date().getFullYear()} {site.name}. All rights reserved.</span>
+          <span>© 2026 {site.name}. All rights reserved.</span>
           <span>Privacy Policy · Terms</span>
         </div>
       </div>
