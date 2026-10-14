@@ -3,6 +3,7 @@ import Icon, { type IconName } from '@/components/ui/Icon';
 import { reveal } from '@/lib/reveal';
 import AboutPhoto from './AboutPhoto';
 import './about.css';
+import { MoveRight } from '@/constants/svgs';
 
 const features: { icon: IconName; lines: [string, string] }[] = [
   { icon: 'heart', lines: ['Child-Centred', 'Approach'] },
@@ -43,7 +44,7 @@ export default function About() {
               </div>
             ))}
           </div>
-          <a href="#contact" className="btn">Learn More About Us →</a>
+          <a href="#contact" className="btn">Learn More About Us <MoveRight strokeWidth={1.6} /></a>
         </div>
       </div>
     </section>

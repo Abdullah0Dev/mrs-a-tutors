@@ -3,6 +3,7 @@
 import { type FormEvent, useState } from 'react';
 import { site } from '@/data/site';
 import { reveal } from '@/lib/reveal';
+import { MoveRight } from '@/constants/svgs';
 
 /** Opens the visitor's email app with the enquiry pre-filled (no backend needed). */
 export default function ContactForm() {
@@ -37,7 +38,7 @@ export default function ContactForm() {
         </select>
       </label>
       <label>How can we help?<textarea name="message" rows={4} /></label>
-      <button className="btn" type="submit" style={{ justifyContent: 'center' }}>Send Message →</button>
+      <button className="btn" type="submit" style={{ justifyContent: 'center' }}>Send Message <MoveRight strokeWidth={1.7} /></button>
       {sent && <p className="ok show" role="status">Your email app should open with your message ready to send.</p>}
     </form>
   );

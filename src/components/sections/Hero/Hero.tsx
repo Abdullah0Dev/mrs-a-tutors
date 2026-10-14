@@ -1,6 +1,7 @@
 import Icon, { type IconName } from '@/components/ui/Icon';
 import HeroScene from './HeroScene';
-import './hero.css';
+import './hero.css'; 
+import { MoveRight } from '@/constants/svgs';
 
 type Highlight = { icon: IconName; title: string; text: string; warm?: boolean };
 
@@ -17,9 +18,9 @@ export default function Hero() {
         <div>
           <p className="eyebrow">Tuition Available for EYFS | KS1 | KS2</p>
           <h1>Learning That Builds Confidence</h1>
-          <p className="lead">Personalised online tuition, enrichment and resources for every child’s journey.</p>
+          <p className="lead">Personalised tuition rooted in one belief: no two children learn the same</p>
           <div className="cta">
-            <a href="#contact" className="btn">Get in Touch →</a>
+            <a href="#contact" className="btn">Get in Touch  <MoveRight strokeWidth={1.6} /></a>
             <a href="#services" className="btn ghost">Our Services</a>
           </div>
           <div className="mini">
