@@ -1,4 +1,16 @@
+@import "tailwindcss";
+
 :root {
+  --color-pink: #f4246f;
+  --color-pink-l: #fde6ee;
+  --color-rose: #fde3ec;
+  --color-cream: #fff7ef;
+  --color-peach: #fff0dc;
+  --color-sky: #e3f0fc;
+  --color-butter: #fdecb0;
+  --color-mute: #55535e;
+  --font-display: var(--font-heading), Georgia, serif;
+  --font-script: var(--font-hand), cursive;
   --pink: #f4246f;
   --pink-d: #d8185c;
   --pink-l: #fde6ee;

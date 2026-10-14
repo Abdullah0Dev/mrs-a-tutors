@@ -20,7 +20,7 @@ export default function Hero() {
           <h1>Learning That Builds Confidence</h1>
           <p className="lead">Personalised tuition rooted in one belief: no two children learn the same</p>
           <div className="cta">
-            <a href="#contact" className="btn">Get in Touch  <MoveRight strokeWidth={1.6} /></a>
+            <a href="/contact" className="btn">Get in Touch  <MoveRight strokeWidth={1.6} /></a>
             <a href="#services" className="btn ghost">Our Services</a>
           </div>
           <div className="mini">

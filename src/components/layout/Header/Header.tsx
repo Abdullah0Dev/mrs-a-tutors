@@ -11,6 +11,7 @@ import {
 import { useEffect, useId, useState } from 'react';
 import { nav } from '@/data/site';
 import './header.css';
+import { usePathname } from 'next/navigation';
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -18,12 +19,19 @@ export default function Header() {
   const [active, setActive] = useState<string>(
     nav[0]?.href ?? '#home',
   );
+  const pathname = usePathname();
+  const isHome = pathname === '/';
+
+  // "#about" -> "/#about" everywhere except the home page
+  const to = (href: string) => (href.startsWith('#') && !isHome ? `/${href}` : href);
 
   const reduceMotion = useReducedMotion();
   const mobileTitleId = useId();
 
   // Keep the active navigation item synchronized with page scrolling.
   useEffect(() => {
+        if (!isHome) return;            // scroll-spy only matters on the home page
+
     let frame = 0;
 
     const syncState = () => {
@@ -80,7 +88,7 @@ export default function Header() {
       window.removeEventListener('resize', syncState);
       window.removeEventListener('hashchange', syncState);
     };
-  }, []);
+  }, [isHome]);
 
   // Lock background scrolling and support the Escape key.
   useEffect(() => {
@@ -187,7 +195,7 @@ export default function Header() {
       >
         <div className="wrap nav">
           <a
-            href="#home"
+            href={to("#home")}
             className="logo"
             aria-label="Mrs A Tutors home"
             onClick={closeMenu}
@@ -210,7 +218,7 @@ export default function Header() {
                 return (
                   <li key={item.href}>
                     <a
-                      href={item.href}
+                      href={to(item.href)}
                       className={isActive ? 'on' : ''}
                       aria-current={
                         isActive ? 'location' : undefined
@@ -234,7 +242,7 @@ export default function Header() {
           </nav>
 
           <a
-            href="#contact"
+            href={"/contact"}
             className="btn header-cta"
             onClick={closeMenu}
           >
@@ -291,7 +299,7 @@ export default function Header() {
           >
             <div className="drawer-header">
               <a
-                href="#home"
+                href={to("#home")}
                 className="drawer-logo"
                 aria-label="Mrs A Tutors home"
                 onClick={closeMenu}
@@ -348,7 +356,7 @@ export default function Header() {
                       variants={itemVariants}
                     >
                       <a
-                        href={item.href}
+                        href={to(item.href)}
                         className={[
                           'drawer-link',
                           isActive ? 'active' : '',
@@ -400,7 +408,7 @@ export default function Header() {
               </span>
 
               <a
-                href="#contact"
+                href={"/contact"}
                 className="drawer-cta"
                 onClick={closeMenu}
               >

@@ -44,7 +44,7 @@ export default function About() {
               </div>
             ))}
           </div>
-          <a href="#contact" className="btn">Learn More About Us <MoveRight strokeWidth={1.6} /></a>
+          <a href="/contact" className="btn">Learn More About Us <MoveRight strokeWidth={1.6} /></a>
         </div>
       </div>
     </section>

@@ -15,7 +15,7 @@ export default function Services() {
         </SectionHead>
         <div className="cards">
           {services.map((s, i) => (
-            <a key={s.label} href="#contact" className={`card ${s.tone}`} {...reveal(i)}>
+            <a key={s.label} href="/contact" className={`card ${s.tone}`} {...reveal(i)}>
               <div className="tx">
                 <Icon name={s.icon} stroke={s.stroke} className="ic" />
                 <h3>
