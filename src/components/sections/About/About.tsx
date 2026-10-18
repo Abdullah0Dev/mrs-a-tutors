@@ -14,7 +14,7 @@ const features: { icon: IconName; lines: [string, string] }[] = [
 export default function About() {
   return (
     <section className="about" id="about">
-      <div className="wrap">
+      <div className="wrap">..
         <div className="photo" {...reveal(0)}>
           <Image
             src="/images/hero-img.jpeg"

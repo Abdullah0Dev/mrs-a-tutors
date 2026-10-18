@@ -11,6 +11,12 @@ const paths = {
   cert: (<><path d="M5 4h22v16H5z" /><path d="M10 9h12M10 14h8" /><circle cx="22" cy="22" r="4" /><path d="M20 26l-1 4 3-2 3 2-1-4" /></>),
   board: (<><rect x="3" y="5" width="26" height="18" rx="2" /><path d="M8 11h14M8 16h9M11 28h10M16 23v5" /></>),
   cap: (<><path d="M16 5L2 11l14 6 14-6z" /><path d="M8 15v7c4 4 12 4 16 0v-7M30 11v8" /></>),
+    chat: <path d="M5 6h22v15H14l-6 5v-5H5z" />,
+  star: <path d="M16 4l3.6 7.5 8.2 1.1-6 5.8 1.5 8.1L16 22.4l-7.3 4.1 1.5-8.1-6-5.8 8.2-1.1z" />,
+  calc: (<><rect x="6" y="3" width="20" height="26" rx="3" /><path d="M10 9h12M11 15h2M15 15h2M19 15h2M11 20h2M15 20h2M19 20h2" /></>),
+  doc: (<><path d="M8 3h12l6 6v20H8z" /><path d="M20 3v6h6M12 15h10M12 20h10M12 25h6" /></>),
+  home: <path d="M4 15L16 5l12 10M7 13v14h18V13M13 27v-8h6v8" />,
+  calendar: (<><rect x="4" y="6" width="24" height="22" rx="3" /><path d="M4 13h24M10 3v6M22 3v6M10 19h2M15 19h2M20 19h2M10 24h2M15 24h2" /></>),
 } satisfies Record<string, ReactNode>;
 
 export type IconName = keyof typeof paths;

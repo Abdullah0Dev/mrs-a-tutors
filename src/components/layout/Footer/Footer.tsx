@@ -20,7 +20,7 @@ export default function Footer() {
           </div>
           <div {...reveal(2)}>
             <h4>Services</h4>
-            <ul>{services.map((s) => <li key={s.label}><a href="#services">{s.label}</a></li>)}</ul>
+            <ul>{services.map((s) => <li key={s.label}><a href={`/services/${s.slug}`}>{s.label}</a></li>)}</ul>
           </div>
           <div {...reveal(3)}>
             <h4>Contact</h4>
