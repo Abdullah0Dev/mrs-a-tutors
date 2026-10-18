@@ -46,7 +46,9 @@ export default function Contact() {
             >
               {/* colours sit on spans so the global `a { color: inherit }` can't override them */}
               <span className="text-base font-medium text-white">Send an Enquiry</span>
-              <span aria-hidden="true" className="inline-block text-white transition-transform duration-200 group-hover:translate-x-1">→</span>
+               <span className="drawer-cta-arrow text-white" aria-hidden="true">
+                  ↗
+                </span>
             </a>
             <p className="m-0 text-sm text-[#55535e]">
               or call{' '}

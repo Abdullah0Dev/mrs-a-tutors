@@ -10,6 +10,7 @@ import Icon from '@/components/ui/Icon';
 import type { Service } from '@/data/services';
 import { reveal } from '@/lib/reveal';
 import { THEME } from './theme';
+import { MoveRight } from '@/constants/svgs';
 
 const ART = {
   a1: EyfsIllustration,
@@ -85,7 +86,7 @@ export default function ServiceDetail({ service }: { service: Service }) {
                 className="group inline-flex items-center gap-2 rounded-full bg-[#f4246f] px-7 py-3.5 shadow-[0_12px_26px_-8px_rgba(244,36,111,.55)] transition duration-200 hover:-translate-y-0.5 hover:bg-[#d8185c] active:scale-[.97]"
               >
                 <span className="font-medium text-white">{detail.cta}</span>
-                <span aria-hidden="true" className="inline-block text-white transition-transform duration-200 group-hover:translate-x-1">→</span>
+                <span aria-hidden="true" className="inline-block text-white transition-transform duration-200 group-hover:translate-x-1"><MoveRight  strokeWidth={1.8} /></span>
               </Link>
               <Link href="/#services" className="group">
                 <span className={`text-sm font-medium underline-offset-4 group-hover:underline ${t.accent}`}>← All services</span>

@@ -3,6 +3,7 @@ import Icon from '@/components/ui/Icon';
 import { services } from '@/data/services';
 import { reveal } from '@/lib/reveal';
 import { THEME } from './theme';
+import { MoveRight } from '@/constants/svgs';
 
 export default function OtherServices({ currentSlug }: { currentSlug: string }) {
   const others = services.filter((s) => s.slug !== currentSlug);
@@ -17,7 +18,7 @@ export default function OtherServices({ currentSlug }: { currentSlug: string }) 
       <ul className="m-0 grid list-none gap-4 p-0 md:grid-cols-3">
         {others.map((s, i) => (
           <li key={s.slug} {...reveal(i)}>
-            <Link
+            <a
               href={`/services/${s.slug}`}
               className={`group flex h-full items-center gap-4 rounded-3xl p-5 transition duration-300 hover:-translate-y-1 hover:shadow-[0_16px_34px_-14px_rgba(244,36,111,.3)] ${THEME[s.tone].soft}`}
             >
@@ -28,8 +29,8 @@ export default function OtherServices({ currentSlug }: { currentSlug: string }) 
                 <span className="block font-semibold">{s.label}</span>
                 <span className="block text-sm text-[#55535e]">{s.subtitle}</span>
               </span>
-              <span aria-hidden="true" className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-[#f4246f] text-white transition-transform duration-200 group-hover:translate-x-1">→</span>
-            </Link>
+              <span aria-hidden="true" className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-[#f4246f] text-white transition-transform duration-200 group-hover:translate-x-1"><MoveRight  strokeWidth={1.8} /></span>
+            </a>
           </li>
         ))}
       </ul>
