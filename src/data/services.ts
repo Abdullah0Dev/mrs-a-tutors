@@ -44,7 +44,7 @@ export const services: Service[] = [
         { icon: 'star', title: 'Confidence Building', text: 'Encouraging independence, participation and self-belief.' },
         { icon: 'heart', title: 'Individualised Support', text: 'Adapting activities to each child’s needs, interests and stage of development.' },
       ],
-      cta: 'Enquire about Early Years',
+      cta: 'Send Mrs A an email',
     },
   },
   {
@@ -61,7 +61,7 @@ export const services: Service[] = [
         { icon: 'calc', title: 'Maths', text: 'Number skills, calculations, mathematical reasoning and problem-solving.' },
         { icon: 'chart', title: 'Confidence & Progress', text: 'Helping children become more independent and confident learners.' },
       ],
-      cta: 'Enquire about Primary Tuition',
+      cta: 'Send Mrs A an email',
     },
   },
   {
@@ -79,7 +79,7 @@ export const services: Service[] = [
         { icon: 'cap', title: 'Skill Development', text: 'Resources that support early literacy, phonics, numeracy and wider learning.' },
         { icon: 'home', title: 'School Readiness', text: 'Resources to help families prepare for important educational transitions.' },
       ],
-      cta: 'Explore our Learning Resources',
+      cta: 'Send Mrs A an email',
     },
   },
   {
@@ -97,7 +97,7 @@ export const services: Service[] = [
         { icon: 'bulb', title: 'Practical Strategies', text: 'Explore activities and approaches you can use at home.' },
         { icon: 'heart', title: 'Ongoing Guidance', text: 'Access appropriate resources and support to help reinforce your child’s learning journey.' },
       ],
-      cta: 'Book a Parent Consultation',
+      cta: 'Send Mrs A an email',
     },
   },
 ];

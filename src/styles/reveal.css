@@ -2,6 +2,9 @@
  * Scroll-reveal. Elements opt in with data-reveal (see lib/reveal.ts).
  * They are VISIBLE by default – RevealObserver only hides (data-armed) elements that are
  * below the fold, then un-hides them (data-in). If JS ever fails, content simply stays visible.
+ https://mrs-a-tutors.vercel.app/services/learning-resources
+ https://mrs-a-tutors.vercel.app/services/primary-tuition
+ https://mrs-a-tutors.vercel.app/services/parent-support
  */
 html [data-reveal][data-armed] {
   opacity: 0;
@@ -19,3 +22,4 @@ html [data-reveal="tilt"][data-armed][data-in] { transform: rotate(-5deg); }
   html [data-reveal][data-armed] { opacity: 1; transform: none; transition: none; }
   html [data-reveal="tilt"][data-armed] { transform: rotate(-5deg); }
 }
+

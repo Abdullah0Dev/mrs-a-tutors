@@ -23,7 +23,7 @@ export default function About() {
             sizes="(min-width: 1100px) 360px, (min-width: 560px) 560px, 100vw"
             className="object-cover object-[50%_45%]"
           />
-          <div className="note">Same<br />Children<br />Same<br />Potential<br />Different<br />Paths ♡</div>
+          {/* <div className="note">Same<br />Children<br />Same<br />Potential<br />Different<br />Paths ♡</div> */}
         </div>
 
         <div className="ahead" {...reveal(1)}>

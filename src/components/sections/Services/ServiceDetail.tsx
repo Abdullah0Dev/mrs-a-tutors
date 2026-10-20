@@ -82,7 +82,7 @@ export default function ServiceDetail({ service }: { service: Service }) {
 
             <div className="mt-2 flex flex-wrap items-center gap-x-6 gap-y-4">
               <Link
-                href="/contact"
+                href="mailto:mrsatutors01@gmail.com"
                 className="group inline-flex items-center gap-2 rounded-full bg-[#f4246f] px-7 py-3.5 shadow-[0_12px_26px_-8px_rgba(244,36,111,.55)] transition duration-200 hover:-translate-y-0.5 hover:bg-[#d8185c] active:scale-[.97]"
               >
                 <span className="font-medium text-white">{detail.cta}</span>
@@ -96,13 +96,13 @@ export default function ServiceDetail({ service }: { service: Service }) {
 
           {/* illustration (or photo if `image` is set in services.ts) */}
           <div className="relative mx-auto w-full max-w-[320px] sm:max-w-[380px] md:max-w-none">
-            <svg
+            {/* <svg
               viewBox="0 0 44 44"
               aria-hidden="true"
               className={`absolute -left-1 -top-3 z-10 h-11 w-11 animate-[float_5s_ease-in-out_infinite] fill-none stroke-[3] [stroke-linecap:round] ${t.stroke}`}
             >
               <path d="M8 34 19 9M22 38 38 14M3 20l10-4" />
-            </svg>
+            </svg> */}
             {service.image ? (
               <div className="relative aspect-[4/5] overflow-hidden rounded-[24px] shadow-[0_18px_40px_-16px_rgba(0,0,0,.3)]">
                 <Image src={service.image.src} alt={service.image.alt} fill priority sizes="(min-width: 768px) 420px, 90vw" className="object-cover" />
