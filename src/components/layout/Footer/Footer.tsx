@@ -35,6 +35,7 @@ export default function Footer() {
         <div className="copy">
           <span>© 2026 {site.name}. All rights reserved.</span>
           <span>Privacy Policy · Terms</span>
+          {/*    <span>Made by <Link target="_blank"  href={"https://aireceptions.co.uk/"}>AutoReception.AI</Link> </span> */}
         </div>
       </div>
     </footer>

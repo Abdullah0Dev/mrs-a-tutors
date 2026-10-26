@@ -3,9 +3,9 @@ import type { ReactNode } from 'react';
 import Footer from '@/components/layout/Footer/Footer';
 import Header from '@/components/layout/Header/Header';
 import { reveal } from '@/lib/reveal';
-
+//https://docs.google.com/forms/d/e/1FAIpQLSfBdm8LI6pkT15slNeB3UULJUoCXoAsps3T2b2Y7jkxcFuPuQ/viewform?usp=dialog
 const FORM_URL =
-  'https://docs.google.com/forms/d/e/1FAIpQLScV5ECF-A3_T3sozIePmlnJ1QwarWSyyWCJqy3bhIGP84yB3A/viewform';
+  'https://docs.google.com/forms/d/e/1FAIpQLSfBdm8LI6pkT15slNeB3UULJUoCXoAsps3T2b2Y7jkxcFuPuQ/viewform';
 const FORM_EMBED_URL = `${FORM_URL}?embedded=true`;
 
 const EMAIL = 'mrsatutors01@gmail.com';
