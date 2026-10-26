@@ -2,6 +2,7 @@ import { services } from '@/data/services';
 import { nav, site } from '@/data/site';
 import { reveal } from '@/lib/reveal';
 import './footer.css';
+import Link from 'next/link';
 
 const explore = nav.filter((n) => ['#about', '#services', '#resources', '#testimonials'].includes(n.href));
 
@@ -34,7 +35,8 @@ export default function Footer() {
         </div>
         <div className="copy">
           <span>© 2026 {site.name}. All rights reserved.</span>
-          <span>Privacy Policy · Terms</span>
+          {/* https://drive.google.com/drive/folders/14Zr4dErVabiUJHkgEHecMPn1e10eHhpm */}
+          <Link target="_blank"  href="https://drive.google.com/drive/folders/14Zr4dErVabiUJHkgEHecMPn1e10eHhpm">Privacy Policy & Terms</Link>
           {/*    <span>Made by <Link target="_blank"  href={"https://aireceptions.co.uk/"}>AutoReception.AI</Link> </span> */}
         </div>
       </div>
