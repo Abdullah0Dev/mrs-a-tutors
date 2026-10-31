@@ -1,4 +1,3 @@
-
 import type { Metadata, Viewport } from "next";
 import { Caveat, Playfair_Display, Poppins } from "next/font/google";
 
@@ -42,10 +41,7 @@ const SITE_NAME = site.name;
 // The file must exist at public/images/og-image.png.
 const SOCIAL_IMAGE = "/images/og-image.jpeg";
 
-const SOCIAL_IMAGE_URL = new URL(
-  SOCIAL_IMAGE,
-  `${SITE_URL}/`,
-).toString();
+const SOCIAL_IMAGE_URL = new URL(SOCIAL_IMAGE, `${SITE_URL}/`).toString();
 
 // ── SEO keywords ──────────────────────────────────────────────
 
@@ -158,22 +154,27 @@ export default function RootLayout({
       lang="en-GB"
       className={`${heading.variable} ${body.variable} ${hand.variable} antialiased`}
     >
+      <head>
+        <script
+          defer
+          src="https://cloud.umami.is/script.js"
+          data-website-id="8c6b8477-3fc1-4ec4-8466-93f5135a9fd6"
+        ></script>
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(structuredData).replace(/</g, "\\u003c"),
+          }}
+        />
+
+      </head>
       <body>
         <a className="skip-link" href="#main">
           Skip to content
         </a>
 
         <SvgSprite />
-
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(structuredData).replace(
-              /</g,
-              "\\u003c",
-            ),
-          }}
-        />
 
         {children}
 
